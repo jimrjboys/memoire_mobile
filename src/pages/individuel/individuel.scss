@@ -1,0 +1,64 @@
+page-individuel {
+	.item-md{
+		background-color: transparent;
+	    border: 1px solid #FFF;
+    	margin-bottom: 7px;   
+	}
+	.primary_input{
+	    color: #FFF !important;
+	    border-right: 1px solid #FFF;
+	    padding-right: 7px;
+	}
+	.placeholder-text{
+		color:#FFF;
+	}
+	.inptu_value{
+		color: #FFF !important;
+	}
+	.text-input::-moz-placeholder {
+	  color: white;
+	}
+
+	.text-input:-ms-input-placeholder {
+	  color: white;
+	}
+
+	.text-input::-webkit-input-placeholder {
+	  text-indent: 0;
+	  color: white;
+	}
+	.text-input-md {
+	    margin: 13px 8px;
+	    padding: 0;
+	    width: calc(100% - 8px - 8px);
+	    color: #FFF;
+	}
+	.list-md {
+	    margin: -1px 19px 16px;
+	    width: 90%;
+	}
+	.rest_pass{
+		float: right;
+	    position: relative;
+	    top: -16px;
+	    left: -1px;
+	    color: #FFF;
+	    text-transform: none;
+	}
+	.btn-register{
+		background-color: transparent;
+		color: #FFF;
+		font-size: 14px;
+	}
+	.account{
+		color: #14d2f1;
+	}
+	.s{
+	    border-radius: 50%;
+	    background: transparent;
+	    border: 1px solid #FFF;
+	    height: 145px !important;
+	    width: 145px !important;
+	    padding: 0px;
+	}
+}

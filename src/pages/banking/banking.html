@@ -1,0 +1,61 @@
+<tool-head [displayToogle] ="true"></tool-head>
+<ion-content class="content_bank">
+
+	<div class="pCard_card">
+		<!-- <button ion-button menuToggle><ion-icon ios="ios-menu" md="md-menu"></ion-icon></button>        -->
+  		<!-- <div class="pCard_up" [style.backgroundImage]="'url(' + session?.user?.image?.url  + ')'">
+          <div class="pCard_text">
+              <h2>{{ session?.user?.shortDisplay }}</h2>
+              <p>{{ session?.user?.display }}</p>
+          </div>
+          <div class="gradien"></div>
+
+          <div class="pCard_add" (click)="show()"><img src="
+          	assets/images/plus.png" class="plus" alt="icon add"></div>
+      </div> -->
+
+      <!-- <div class="pCard_down"> -->
+        <!--div (tap)="contact(false)">
+            <p>Contacts</p>
+            <p>{{ contact_nb || '0' }}</p>
+        </div>
+        <div (tap)="account()">
+            <p>Mouvements</p>
+            <p>{{ moov_nb || '0' }}</p>
+        </div-->
+      <!-- </div> -->
+
+    <div class="pCard_back">
+		  <h1 class="fintek-title"><span class="blue">Fin</span><span class="not-blue">PAY</span></h1>
+		<!-- <h1 class="fintek-title"><span class="blue">Fin</span><span class="not-blue">PAY</span>  <span class="blue">Pro</span> </h1> -->
+        <!-- <ion-grid padding class="grid_bank"> -->
+			  	<ion-row>
+				    <ion-col col-6 class="col-bank-account" size="auto" (click)="comptesipem()">
+						<p class="label_bank _acc">Mon compte</p>
+				    	<!-- <img src="
+						assets/images/account.png" class="icons_bank" alt="account icon"> -->
+						<img src="
+				    	assets/icon/register_menu.png" class="icons_bank" alt="account icon">
+
+				    </ion-col>
+				    <ion-col col-6 class="col-bank-account" size="auto" (tap)="flash()">
+						<p class="label_bank _acc">Flash code</p>
+				    	<img src="
+				    	assets/icon/flash_menu.png" class="icons_bank" alt="flash code icon">
+				    </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col col-3 size="auto"></ion-col>
+            <ion-col col-4 size="auto"  class="col-bank-account" (tap)="historic()">
+              <p class="label_bank _acc">Assistance</p>
+              <img src="assets/icon/info_menu.png" class="icons_bank" alt="flash code icon" style="display: block;
+              margin-left: auto;
+              margin-right: auto;">
+            </ion-col>
+            <ion-col col-4 size="auto"></ion-col>
+          </ion-row>
+        
+      </div>
+
+    </div>
+</ion-content>

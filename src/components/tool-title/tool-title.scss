@@ -1,0 +1,221 @@
+tool-title {
+	h1 {
+		display: block;
+		background-color: #2b9ba3;
+		width: $card-width;
+		margin: 0 auto;
+		text-align: center;
+		padding: 25px 0 20px 0;
+		border-radius: 10px;
+		color: #FFF;
+		font-size: 30px;
+        margin-bottom: 28px;
+	}
+
+	.tool-icon {
+    display: block;
+    width: 22%;
+    position: absolute;
+    padding: 1% 2% 0 0;
+		img {
+			float: right;
+			width: 63px;
+			// -webkit-transform: translateZ(0);
+			// -ms-transform: translateZ(0);
+			// transform: translateZ(0);
+			// -webkit-animation: image 2s infinite linear;
+			// animation: image 2s infinite linear;
+		}
+		ion-label {
+			position: relative;
+			//position: absolute;
+			//right: 2%;
+			left: 78%;
+			//bottom: -80px;
+			line-height: 80px;
+		}
+	}
+
+	.loadIcon,.loadIcon:after {
+		border-radius: 50%;
+		width: 120px !important;
+		height: 120px;
+	}
+
+	.loadIcon {
+	//margin: 60px auto;
+	//right: 2%;
+	left: 65%;
+	font-size: 10px;
+	position: relative;
+	text-indent: -9999em;
+	//background: linear-gradient(#eaeceaa1, #44484433) !important;
+	background-image: url(../../assets/icon/gradiant.png);
+	/*border-top: 1.1em solid rgba(255, 255, 255, 0.2);*/
+	/*border-top: 1.1em solid rgba(255, 255, 255, 0.64);
+	border-right: 1.1em solid rgba(255, 255, 255, 0.2);
+	border-bottom: 1.1em solid rgba(255, 255, 255, 0.2);
+	border-left: 1.1em solid #ffffff;*/
+	-webkit-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	transform: translateZ(0);
+	-webkit-animation: load8 2s infinite linear;
+	animation: load8 2s infinite linear;
+	padding:13px;
+	}
+
+	@-webkit-keyframes load8 {
+		0% {
+			-webkit-transform: rotate(0deg) ;
+			transform: rotate(0deg);
+		}
+		100% {
+			-webkit-transform: rotate(360deg);
+			transform: rotate(360deg);
+		}
+	}
+	@keyframes load8 {
+		0% {
+			-webkit-transform: rotate(0deg);
+			transform: rotate(0deg);
+		}
+		100% {
+			-webkit-transform: rotate(360deg);
+			transform: rotate(360deg);
+		}
+	}
+
+	@-webkit-keyframes image {
+		0% {
+			-webkit-transform: rotate(0deg);
+			transform: rotate(0deg);
+		}
+		100% {
+			-webkit-transform: rotate(-360deg);
+			transform: rotate(-360deg);
+		}
+	}
+	@keyframes image {
+		0% {
+			-webkit-transform: rotate(0deg);
+			transform: rotate(0deg);
+		}
+		100% {
+			-webkit-transform: rotate(-360deg);
+			transform: rotate(-360deg);
+		}
+	}
+
+	div.center {
+		background: white;
+		height: 100%;
+		border-radius: 50%;
+		-webkit-transform: translateZ(0);
+		-ms-transform: translateZ(0);
+		transform: translateZ(0);
+		-webkit-animation: image 2s infinite linear;
+		animation: image 2s infinite linear;
+		background-size: 51%;
+    	background-repeat: no-repeat;
+    	background-position: center;
+	}
+
+}
+
+
+page-pict-upload {
+	.loadIcon {
+		margin: auto;
+		left: unset;
+	}
+	.tool-icon {
+		width: 25%;
+		padding: unset;
+		ion-label {
+			margin:auto;
+			left: unset;
+			width: 25%;
+			text-align: center;
+		}
+	}
+	@media screen and (max-width: $screen-s1) {
+		tool-title {
+			.tool-icon {
+				position: unset;
+				margin: auto auto 12px auto;
+				ion-label {
+					display: none
+				}
+			}
+			h1 {
+				width: 90%;
+				font-size: 1.5em;
+			}
+			.item-md {
+				width: 90%;
+			}
+			.loadIcon {
+				left: -22px;
+			}
+		}
+	}
+	.button-md {
+		width: 46%;
+		height: auto !important;
+	}
+}
+
+page-register {
+	tool-title .tool-icon {
+		display: block;
+		width: 24%;
+		position: absolute;
+		padding: unset; 
+	}
+
+	tool-title .loadIcon, tool-title .loadIcon:after {
+		border-radius: 50%;
+		width: 80px !important;
+		height: 80px;
+	}
+	tool-title .loadIcon {
+		padding: 9px;
+	}
+
+	@media screen and (max-width: $screen-s2) {
+		tool-title {
+			h1 {
+				font-size: 1.6em;
+				margin-bottom: 28px;
+			}
+			.loadIcon {
+				position: unset;
+				margin: auto 12px auto auto;
+			} 
+		}
+	}
+
+	@media screen and (max-width: $screen-s1) {
+		tool-title {
+			.tool-icon {
+				position: unset;
+				margin: auto auto -17px auto;
+			}
+			h1 {
+				width: 90%;
+				font-size: 1.5em;
+			}
+			.loadIcon {
+				padding: 7px;
+				width: 65px !important;
+    			height: 65px;
+			}
+			.item-md {
+				width: 90%;
+			}
+		}
+	}
+}
+
+
+

@@ -1,0 +1,34 @@
+<tool-head [displayToogle] ="true">
+
+</tool-head>
+<ion-content class="content_bank">
+    <!-- <ion-fab  left bottom style="margin-block-end: 15%;" (click)="backdashboard()">
+      <button ion-fab color="light" mini><ion-icon name="arrow-dropleft"></ion-icon></button>
+    </ion-fab> -->
+	<div class="pCard_card">
+
+      <ion-grid padding class="position_text">
+          <ion-row>
+            <ion-col col-3>
+                <img src="assets/icon/folders.png" class="icon_compte" alt="account icon">
+            </ion-col>
+            <ion-col col-9>
+                <h4 class="fintek-title"><span class="blue">Mon</span><span class="not-blue"> compte</span></h4>
+            </ion-col>
+          </ion-row>
+      </ion-grid>
+
+      <ion-grid padding class="position_table">
+          <ion-row class="blue_small" (tap) ="account()">
+              <ion-col col-6>DAV</ion-col>
+              <ion-col col-6>{{ availableBalance }}  {{ currency }}</ion-col>
+          </ion-row>
+
+          <!-- <ion-row class="blue_small epargne">
+              <ion-col col-6>Epargne</ion-col>
+              <ion-col col-6 >1 760 000Ar</ion-col>
+          </ion-row> -->
+      </ion-grid>
+  </div>
+
+</ion-content>

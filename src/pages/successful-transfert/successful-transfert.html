@@ -1,0 +1,52 @@
+<tool-head></tool-head>			
+<ion-content padding has-header>
+
+     <div class="loadIcon">
+      <div class="center" >
+      </div>
+    </div>
+
+	<div class="InfoSuccesTransfert">		
+	  <h1>Paiement effectué</h1>
+	</div>
+	 <!-- <div>
+	   <h3> merci d'avoir utilisé FinPay </h3>
+	 </div> -->
+   <button ion-button (tap)="ok()">OK</button>
+<!--tool-button text="Imprimer pour le client"></tool-button-->
+	<!-- <button ion-button (tap)="tpePrint()" class="_imp"><img src="assets/images/print.png" class="_print" full>IMPRIMER</button> -->
+	<!-- <div *ngIf='!hasPermission && !permissionRequested'>
+    <button (click)='getPermission()'>Request permission to read IMEI</button>
+	</div>
+	<div *ngIf='permissionRequested'>
+			<strong>Restart app to read IMEI</strong>
+	</div>
+	<div *ngIf='imei'>
+			IMEI: {{ imei }}
+	</div> -->
+</ion-content>
+<!--ion-header>
+
+  <ion-navbar>
+    <ion-title>Transaction réussie</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+
+	<h1>Transaction n°: {{ payment.id }}</h1>
+	Nom de l'utilisateur : {{ session.user.display }}<br>
+	Bénéficiaire : {{ payment.type.name }}<br>
+	{{ payment.toUser.display }}<br>
+	Montant : {{ payment.amount }} {{ payment.currency.suffix }}<br>
+	Date et heure : {{ payment.date }}<br>
+	Description : {{ payment.description }}<br>
+	<div class="card_footer">
+		<button ion-button (tap)="print()" class="_imp"><img src="assets/images/print.png" class="_print" full>IMPRIMER</button>
+		<button ion-button (tap)="ok()">OK</button>
+	</div>
+
+</ion-content-->

@@ -1,0 +1,41 @@
+page-compte {
+
+  .position_text{
+    margin-top: 10%;
+  }
+
+  .position_table{
+    margin-top: 14%;
+    position: absolute;
+    text-align: center;
+  }
+
+  .fintek-title {
+      font-size: 7.6rem;
+      .blue {
+          color: $blue-color2;
+      }
+      .not-blue {
+          color: $head-color;
+      }
+  }
+
+  .blue_small{
+    color: $blue-color2;
+    font-weight: bold;
+  }
+
+  .epargne{
+    background: #DEEBF7;
+  }
+
+
+  @media screen and (max-width: $screen-s1) {
+    .fintek-title {
+        font-size: 3.3rem;
+        text-align: center;
+    }
+  }
+
+}
+

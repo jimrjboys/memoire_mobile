@@ -1,0 +1,43 @@
+page-account {
+	.button-md {
+		background-color: #266b9e;
+		height: 16px!important;
+		border-radius: 10px;
+		color: #FFF;
+		text-transform: none;
+		width: auto;
+		font-size: 14px!important;
+		float: left;
+  }
+
+  .pCard_card {
+    width: 100%;
+    height: 100%;
+    background-color: #f6fcfe;
+    -webkit-box-shadow: 0px 20px 70px 0px rgba(0, 0, 0, 0.21);
+    -moz-box-shadow: 0px 20px 70px 0px rgba(0, 0, 0, 0.21);
+    -ms-box-shadow: 0px 20px 70px 0px rgba(0, 0, 0, 0.21);
+    -o-box-shadow: 0px 20px 70px 0px rgba(0, 0, 0, 0.21);
+    box-shadow: 0px 20px 70px 0px rgba(0, 0, 0, 0.21);
+    position: relative;
+    overflow: hidden;
+}
+
+.pCard_card .pCard_back {
+  text-align: center;
+  //position: absolute;
+  //left: 0;
+  //right: 0;
+  //top: 50%;
+  //top: 43%;
+  //margin-top: 55px;
+  font-weight: 600;
+  //z-index: 1;
+
+
+}
+.pCard_card .pCard_back a {
+  text-decoration: none;
+}
+
+}

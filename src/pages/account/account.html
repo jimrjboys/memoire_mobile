@@ -1,0 +1,79 @@
+<!-- <ion-header class="header_">
+<ion-navbar>
+    <ion-title *ngIf="accounts?.length > 1">Mes comptes</ion-title>
+    <ion-title *ngIf="accounts?.length == 1">Mon compte</ion-title>
+  </ion-navbar>
+</ion-header> -->
+<tool-head></tool-head>
+
+<ion-content>
+  <!-- <ion-card *ngFor="let account of accounts" (tap)="accountDetail(account)">
+  <img src="assets/images/account.png" alt="icon account">
+  <ion-card-content>
+    <ion-grid>
+    <ion-row>
+      <ion-col col-9>
+        <div><strong>{{account.type.name}}</strong></div>
+      </ion-col>
+      <ion-col col-3>
+        <div><ion-badge item-end class="bgd">{{account.status.balance}} {{account.currency.suffix}}</ion-badge></div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  </ion-card-content>
+</ion-card> -->
+<h1>Historique</h1>
+Date:
+<ion-searchbar type="date"  placeholder="Date"  [(ngModel)]="searchDate" (ionInput)="filter()"></ion-searchbar>
+Description:
+<ion-searchbar type="text" placeholder="Description"  [(ngModel)]="searchDescription" (ionInput)="filter()"></ion-searchbar>
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      Date et heure
+    </ion-col>
+    <ion-col>
+      Description
+    </ion-col>
+    <ion-col>
+      Montant
+    </ion-col>
+    <ion-col>
+      Frais de transaction
+    </ion-col>
+    <ion-col>
+      
+    </ion-col>
+  </ion-row>
+  <ion-row *ngFor="let history of historiesRefresh">
+    <ion-col>
+      {{ history.date | date: 'dd/MM/yyyy H:mm'}}
+    </ion-col>
+    <ion-col>
+      {{ history.description }}
+    </ion-col>
+    <ion-col>
+      {{ history.amount }}
+    </ion-col>
+    <ion-col>
+      {{ history.customValues?.transferFees }}
+    </ion-col>
+    <ion-col>
+      <button ion-button full (tap)="print(history.transaction?.id)">
+        imprimer
+      </button>
+      <!-- <ion-checkbox slot="end" [(ngModel)]="entry.isChecked"></ion-checkbox> -->
+      <!-- <ion-checkbox slot="end" [(ngModel)] ="history.id"></ion-checkbox> -->
+    </ion-col>
+  </ion-row>
+</ion-grid>
+</ion-content>
+<!-- <ion-footer>
+  <ion-toolbar>
+    <ion-title>
+      <button ion-button full>
+       imprimer tout
+      </button>
+  </ion-title>
+  </ion-toolbar>
+</ion-footer> -->

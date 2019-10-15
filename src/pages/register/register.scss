@@ -1,0 +1,60 @@
+page-register {
+    .btn-return {
+        bottom: 3px;
+        left: 0.4%;
+        position: fixed;
+        z-index: 999;
+        img {
+            width: 32px;
+        }
+    }
+
+    @media screen and (min-width: 360px) and (max-width:500px) {
+		tool-title {
+			.loadIcon {
+				padding: 7px;
+				width: 65px !important;
+    			height: 65px;
+			}
+        }
+        .item-md {
+            width: 90% !important;
+            height: 85px;
+        }
+        .button-md {
+            font-size: 0.9em !important;
+            height: 50px!important;
+        }
+	}
+
+
+
+   @media screen and (min-width: 100px) and (max-width: 360px) {
+
+        .item-md {
+            width: 103% !important;
+            height: 85px;
+            font-size: 17px;
+        }
+
+        .button-md {
+            font-size: 0.8em !important;
+            height: 50px!important;
+        }
+
+        ion-label {
+            color: #266b9e !important;
+            font-size: 15px !important;
+        }
+
+       .item-md.item-label-stacked [item-end], .item-md.item-label-floating [item-end] {
+            margin-top: 7px;
+            margin-bottom: 7px;
+            margin-right: 25px;
+       }
+    }
+
+    .scroll-content {
+      bottom: 70px;
+    }
+}

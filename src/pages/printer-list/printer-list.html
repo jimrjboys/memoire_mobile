@@ -1,0 +1,17 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Liste d'imprimante bluetooth</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+	<ion-item *ngFor="let printer of printers" (tap)="write(printer)">
+		{{ printer.name }}
+	</ion-item>
+
+	<button ion-button (tap)="refresh()" full>Rafraîchir la liste</button>
+</ion-content>

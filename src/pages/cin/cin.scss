@@ -1,0 +1,52 @@
+page-cin {
+
+  ion-card {
+    position: relative;
+    text-align: center;
+    height: 230px;
+    img {
+      top: -60%;
+      position: absolute;
+    }
+  }
+
+  .card-title {
+    position: absolute;
+    top: 36%;
+    font-size: 2.0em;
+    width: 100%;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .card-subtitle {
+    font-size: 1.0em;
+    position: absolute;
+    top: 52%;
+    width: 100%;
+    color: #fff;
+  }
+
+  .folders{
+    float: right;
+    position: relative;
+    top: -11px;
+  }
+
+  .register-title{
+    font-size: 14px;
+    border-bottom: 1px solid #FFF;
+    padding-bottom: 5px;
+    color: #FFF;
+    text-transform: uppercase;
+  }
+
+  .both {
+    background-image: url("/assets/imgs/card-saopaolo.png");
+  }
+
+  .sides {
+    background-image: url("/assets/imgs/card-amsterdam.png");
+  }
+
+}

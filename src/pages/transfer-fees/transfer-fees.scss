@@ -1,0 +1,36 @@
+page-transfer-fees {
+    .title {
+        text-align: center;
+        font-size: 2.5rem;
+        color: #2b9ba3;
+        font-weight: 600;
+        margin-top: 31px;
+        margin-bottom: 28px;
+        h3 {
+            margin-top: 12px;
+            margin-bottom: 12px;
+            
+        }
+    }
+
+    .fees {
+        text-align: center;
+        margin: 10px auto;
+        padding: 15px;
+        width: 31%;
+        background-color: transparent;
+        border: 1px solid #2b9ba3 !important;
+        border-radius: 10px;
+        color: #266b9e!important;
+    }
+    .button-md {
+        background-color: #266b9e;
+        height: 64px !important;
+        padding: 10px !important;
+        width: 55%;
+        display: block;
+        margin: auto;
+        margin-bottom: 8px;
+        margin-top: 24px;
+    }
+}

@@ -1,0 +1,100 @@
+<tool-head></tool-head>
+<ion-content padding class="background">
+  <div id="form-login">
+      <pict name="Profil" [id]="id" (getUrl)="profil($event)"></pict>
+    <br>
+    <form (ngSubmit)="register()" [formGroup]="form">
+      <div class="item-input ">
+        <ion-item>
+          <ion-label class="primary_input"><ion-icon ios="ios-key" md="md-key"></ion-icon></ion-label>
+          <ion-input type="password" formControlName="password" class="inptu_value" placeholder="Mot de passe"></ion-input>
+        </ion-item>
+        <div no-lines *ngIf="(form.get('password').hasError('required') || form.get('password').hasError('password') ) && form.get('password').touched">     
+            <div class="error" *ngIf="form.get('password').hasError('required') && form.get('password').touched">
+              Mot de passe obligatoire 
+            </div>
+        </div>
+        <ion-item>
+          <ion-label class="primary_input"><ion-icon ios="ios-key" md="md-key"></ion-icon></ion-label>
+          <ion-input type="password" formControlName="confirmPswd" class="inptu_value" placeholder="Resaisir le mot de passe"></ion-input>
+        </ion-item>
+        <div no-lines *ngIf="(form.get('confirmPswd').hasError('required') || form.get('confirmPswd').hasError('minlength') ) && form.get('confirmPswd').touched">
+              <div class="error" *ngIf="form.get('confirmPswd').hasError('required') && form.get('confirmPswd').touched">
+                Resaisir le mot de passe obligatoire 
+              </div>
+        </div>
+        <!--ion-item>
+        <ion-label stacked class="label_all">Numéro de carte bancaire :</ion-label>
+        <ion-input class="individuel_input" type="tel" formControlName="cardNumber"
+        [brmasker]="{mask:'9999 9999 9999 9999', len:19, type:'num'}" ></ion-input>
+      </ion-item-->
+      <!--ion-item>
+        <ion-label stacked class="label_all">Mon nouveau code PIN :</ion-label>
+        <ion-input class="individuel_input" type="password" formControlName="pin"
+        [brmasker]="{mask:'9999', len:4, type:'num'}" ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked class="label_all">Resaisir mon code PIN :</ion-label>
+        <ion-input class="individuel_input" type="password" formControlName="pinConf"
+        [brmasker]="{mask:'9999', len:4, type:'num'}" ></ion-input>
+      </ion-item-->
+      <!--ion-item>
+        <ion-label stacked class="label_all">*Nom</ion-label>
+        <ion-input type="text" formControlName="name" class="individuel_input"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked class="label_all">*Prénom</ion-label>
+        <ion-input type="text" formControlName="first_name" class="individuel_input"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked class="label_all">Surnom</ion-label>
+        <ion-input type="text" formControlName="nickname" class="individuel_input"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked class="label_all">*Date de naissance</ion-label>
+        <ion-datetime 
+          max="2000" 
+          formControlName="birth_date" 
+          displayFormat="DD MMMM YYYY" 
+              cancelText="Annuler"
+              doneText="Ok"
+          class="individuel_inputs"
+          #birth_date
+          >
+        </ion-datetime>
+        <button class="calendar_button" ion-button clear color="dark" type="button" item-right
+          (tap)="openBirthDatePicker()"> 
+          <ion-icon name="calendar" class="ligth"></ion-icon> 
+        </button>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked class="label_all">Lieu de naissance</ion-label>
+        <ion-input type="text" formControlName="birth_place" class="individuel_input"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked class="label_all">*Genre</ion-label>
+        <ion-select formControlName="gender"
+            cancelText='Annuler'
+            doneText='Ok' 
+            [selectOptions]="genreOptions"
+            class="individuel_input"
+            >
+          <ion-option>Feminin</ion-option>
+          <ion-option>Masculin</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked class="label_all">*Numéro CIN</ion-label>
+        <ion-input type="text" formControlName="cin_number" placeholder="101 - 231 - 345 - 678" 
+        [brmasker]="{mask:'999 - 999 - 999 - 999', len:21, type:'num'}" class="individuel_input">
+        </ion-input>
+      </ion-item-->
+      <!--button ion-button full *ngIf="!customer">Mes dossiers >></button-->
+      <!--button ion-button full *ngIf="customer">Enregistrer</button-->
+        <button ion-button full class="btn-form">Enregistrer</button>
+      </div>
+    </form>
+    <br>
+    <!--button ion-button full (tap)="navCtrl.pop()"><< Retour</button-->
+  </div>
+</ion-content>

@@ -1,0 +1,25 @@
+<!-- <ion-card (tap)="takePicture(card.id)">
+	<ion-row>
+		<ion-col col-6 class="col-img">
+			<img [src]="card.icon" alt="icon {{ card.name }}">
+		</ion-col>
+		<ion-col col-6>
+			<div class="card-title">{{ card.name }}
+				<ion-icon name="checkmark" *ngIf = "show"></ion-icon>
+			</div>
+		</ion-col>
+	  </ion-row>
+</ion-card> -->
+ 
+<ion-card (tap)="takePicture(card.id)">
+    <ion-row>
+        <ion-col col-6>
+            <img [src]="card.icon" alt="icon {{ card.name }} ">
+        </ion-col>
+        <ion-col col-6>
+            <div class="card-title"> {{ card.name }}
+                <ion-icon name="checkmark" *ngIf = "show" ></ion-icon>
+            </div>
+        </ion-col>
+      </ion-row>
+</ion-card>

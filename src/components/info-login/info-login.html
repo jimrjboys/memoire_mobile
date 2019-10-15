@@ -1,0 +1,75 @@
+
+<form (ngSubmit)="registermail()" [formGroup]="form" >
+ <ion-item>
+    <ion-label stacked class="label_all">
+      <ion-icon name="mail"></ion-icon>
+      Adresse e-mail
+    </ion-label>
+
+    <ion-input type="email" formControlName="email" 
+    placeholder="  - - - - - - - - - - - - "
+    [(disabled)]="showPswrd" >
+    </ion-input>
+
+     <button ion-button clear item-end 
+       *ngIf = "!showPswrd"class="btn-validate">
+        Valider
+    </button>
+
+    <span ion-button clear  item-end *ngIf="showPswrd"  (tap) = "modify('mail')" class="btn-modified">
+        Modifier
+    </span>
+  
+  </ion-item>
+</form>
+
+<!-- <form (ngSubmit)="register()" [formGroup]="formPwd" *ngIf="showPswrd && form.valid" > -->
+<!--   <ion-item>
+    <ion-label stacked class="label_all">
+    	<ion-icon name="mail"></ion-icon>
+    	Adresse e-mail
+    </ion-label>
+    <ion-input type="email" formControlName="email" placeholder="  - - - - - - - - - - - - ">
+    </ion-input>
+  </ion-item> -->
+  <!-- <ion-item>
+    <ion-label stacked class="label_all">
+    	<ion-icon name="key"></ion-icon>
+    	Mot de passe
+    </ion-label>
+    <ion-input type="password" formControlName="password" placeholder="********">
+    </ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked class="label_all">
+    	<ion-icon name="key"></ion-icon>
+    	Resaisir le mot de passe
+    </ion-label>
+    <ion-input type="password" formControlName="confirmPswd" placeholder="********">
+    </ion-input>
+  </ion-item> -->
+  <!-- <button ion-button full class="btn-form" >Enregistrer</button> -->
+  <!-- <button ion-button class='btn btn-primary' (tap)="validateInfoLogin()">Click me</button>  -->
+  <!-- <button ion-button class='btn btn-primary' >Click me</button>  -->
+	<!-- <tool-button [text] ="'Valider'"></tool-button> -->
+<!-- </form> -->
+
+<div  *ngIf="showPswrd && form.valid" >
+  <ion-item>
+    <ion-label stacked class="label_all">
+      <ion-icon name="key"></ion-icon>
+      Mot de passe
+    </ion-label>
+    <ion-input type="password" [(ngModel)]="passwords.password" placeholder="********"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked class="label_all">
+      <ion-icon name="key"></ion-icon>
+      Resaisir le mot de passe
+    </ion-label>
+    <ion-input type="password" [(ngModel)]="passwords.confirm" placeholder="********"></ion-input>
+  </ion-item>
+  <button ion-button full  class="btn-form" (tap)="validateInfoLogin()">Enregistrer</button>
+</div>
+
+

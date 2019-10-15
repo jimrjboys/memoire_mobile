@@ -1,0 +1,39 @@
+<ion-content padding class="background">
+   <br>
+   <br>
+  <div id="form-login">
+    <h1 class="register-title">
+    CIN <img src="/assets/imgs/id-cards-with-profile-images-variant.png" class="folders" alt="cin image">
+  </h1>
+  <br>
+  <ion-card (tap)="takePicture('both')" class="both">
+
+    <img *ngIf="!pict['both']" alt="image not set" />
+    <img [src]="pict['both']" *ngIf="pict['both']" alt="image set"/>
+    <div class="container">
+      <span class="elements">Recto</span>
+      <img src="/assets/imgs/photo-camera.png" class="cames" alt="recto background" />
+      <div class="circle" style="animation-delay: -3s"></div>
+      <div class="circle" style="animation-delay: -2s"></div>
+      <div class="circle" style="animation-delay: -1s"></div>
+      <div class="circle" style="animation-delay: 0s"></div> 
+    </div>
+  </ion-card>
+
+  <ion-card (tap)="takePicture('sides')" class="sides">
+
+    <img *ngIf="!pict['sides']" alt="sides not set" />
+    <img [src]="pict['sides']" *ngIf="pict['sides']" alt="sides set" />
+    <div class="container">
+      <span class="elements">Verso</span>
+      <img src="/assets/imgs/photo-camera.png" class="cames" alt="sides background" />
+      <div class="circle" style="animation-delay: -3s"></div>
+      <div class="circle" style="animation-delay: -2s"></div>
+      <div class="circle" style="animation-delay: -1s"></div>
+      <div class="circle" style="animation-delay: 0s"></div> 
+    </div>
+  </ion-card>
+
+  <button ion-button full (tap)="navCtrl.pop()" class="btn-form"> <img src="/assets/imgs/enter-arrow.png" class="arrow_left" alt="icon enter"> Mes dossiers </button>
+  </div>
+</ion-content>

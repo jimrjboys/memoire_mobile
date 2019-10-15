@@ -1,0 +1,52 @@
+<tool-head></tool-head>
+<ion-content padding has-header>
+	<tool-title title="Création de compte" [icon]="icon"></tool-title>
+  <ion-item>
+		<ion-label stacked class="label_all">
+			Numéro de téléphone
+		</ion-label>
+    <ion-input class="individuel_input" type="tel" 
+    	placeholder="- - -  - -  - - -  - -" 
+    	[brmasker]="{mask:'999 99 999 99', len:13, type:'num'}" 
+    	[(ngModel)]="customer.phone" 
+    	[(disabled)]="phoneValid" 
+    	(input)="verifyLength('phone')">
+    </ion-input>
+    <button ion-button clear item-end 
+    	(tap)="validate('Phone')" 
+    	*ngIf="!phoneValid" class="btn-validate">
+    	Valider
+    </button>
+    <button ion-button clear item-end *ngIf="phoneValid && !accountValid" (tap)="modify('phone')" class="btn-modified">
+    	Modifier
+    </button>
+  </ion-item>
+
+
+    <ion-item  *ngIf="phoneValid">
+    <ion-label stacked class="label_all">
+        Numéro CIN
+    </ion-label>
+    <ion-input
+        type="tel" 
+        placeholder=" - - -   - - -   - - -   - - -" 
+        [brmasker]="{mask:'999 - 999 - 999 - 999', len:21, type:'num'}" 
+        [(ngModel)]="customer.cin" 
+        [(disabled)]="cinValid" 
+        (input)="verifyLength('cin')">
+    </ion-input>
+    <button ion-button clear item-end 
+        (tap)="validate('Cin')" 
+        *ngIf="!cinValid" class="btn-validate">
+        Valider
+    </button>
+    <button ion-button clear item-end *ngIf="cinValid && !accountValid" (tap)="modify('cin')" class="btn-modified">
+        Modifier
+    </button>
+  </ion-item>
+   <info-login  *ngIf="newCustomer && cinValid" (infoLogin)='infoLogin($event)'></info-login>
+   <!-- <info-login   (infoLogin)='infoLogin($event)'></info-login> -->
+  <!-- <div class="btn-return" (tap)="return()">
+    <img src="assets/icon/backbutton.png" alt="boutton retour">
+  </div> -->
+</ion-content>

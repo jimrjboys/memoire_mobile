@@ -1,0 +1,8 @@
+<ion-menu [content]="menu" class="myMenu">
+	<button ion-item (tap)="logout()" menuClose class="loggout">
+		<img src="assets/icon/logout.png" class="left-img" alt="logout icon">
+		<span>Déconnexion</span>
+	</button>
+</ion-menu>
+<!-- <tool-head *ngIf="rootPage != splashPage && rootPage != loginPage"></tool-head> -->
+<ion-nav #menu [root]="rootPage"></ion-nav>

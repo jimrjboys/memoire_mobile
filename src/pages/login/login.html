@@ -1,0 +1,31 @@
+<tool-head [display]="false"></tool-head>
+<ion-content padding has-header>
+  <!-- <img [src]="config.application.logo_circle.url" 
+  [alt]="config.application.logo.alt" id="fintek_logo" /> -->
+  <div class="loadIcon">
+    <div class="center" >
+    </div>
+  </div> 
+  <form (ngSubmit)="login()" [formGroup]="form">
+    <!-- <ion-item>
+      <ion-label><ion-icon name="call"></ion-icon></ion-label>
+      <ion-input type="tel" formControlName="name" placeholder="Code secret" 
+      [brmasker]="{mask:'999 99 999 99', len:13, type:'num'}"></ion-input>
+    </ion-item> -->
+    <ion-item>
+      <ion-label>
+        <ion-icon name="unlock"></ion-icon>
+        <!--ion-icon name="person"></ion-icon>
+        <ion-icon name="warning"></ion-icon>
+        <ion-icon name="finger-print"></ion-icon-->
+      </ion-label>
+      <ion-input type="text" placeholder="Identifiant" formControlName="agent"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label><ion-icon name="key"></ion-icon></ion-label>
+      <ion-input type="password" formControlName="password" placeholder="Mot de passe"></ion-input>
+    </ion-item>
+    <button ion-button full>Se connecter</button>
+  </form>
+  <button ion-button full (tap)="register()">S'inscrire</button>
+</ion-content>

@@ -1,0 +1,62 @@
+<tool-head [displayToogle] ="true">
+
+</tool-head>
+  <ion-content class="content_bank">
+      
+      <div class="pCard_card">
+
+        <ion-grid padding class="position_text">
+            <ion-row>
+              <ion-col col-3>
+                  <img src="assets/icon/folders.png" class="icon_compte" alt="account icon">
+              </ion-col>
+              <ion-col col-9>
+                  <h4 class="fintek-title"><span class="not-blue"> DAV</span></h4>
+              </ion-col>
+            </ion-row>
+        </ion-grid>
+
+        <ion-grid padding class="position_text_solde">
+            <ion-row>
+              <ion-col col-12>
+                  <h4 class="fintek-title"><span class="not-blue">Solde : {{ availableBalance | number: '2.' }} MGA</span></h4>
+              </ion-col>
+            </ion-row>
+        </ion-grid>
+
+        <ion-grid padding class="position_table">
+            <ion-row class="blue_small">
+                <ion-col col-8 class="tete">
+                    Description
+                </ion-col>
+                <ion-col col-4 class="tete">
+                    Solde
+                </ion-col>
+              </ion-row>
+            <ion-row class="blue_small epargne" *ngFor="let history of historiess">
+                <ion-col col-6 *ngIf="history.relatedKind == 'user' ; then user else system "></ion-col>
+                <ng-template #user>
+                  <ion-col col-8 class="debit">
+                    {{ history.relatedUser.display }}
+                    {{ history.description }}
+                  </ion-col>
+                  <ion-col col-4 class="debit">
+                    {{ history.amount | number: '2.' }} {{ history.currency }}
+                  </ion-col>
+                </ng-template>
+                <ng-template #system>
+                  <ion-col col-8 class="valeur">
+                    {{ history.description }}
+                  </ion-col>
+                  <ion-col col-4 class="valeur">
+                    {{ history.amount | number: '2.' }} {{ history.currency }}
+                  </ion-col>
+                </ng-template>
+
+            </ion-row>
+        </ion-grid>
+
+  </div>
+  <!-- *ngIf="compte.relatedAccount.internalName == debit " -->
+  </ion-content>
+

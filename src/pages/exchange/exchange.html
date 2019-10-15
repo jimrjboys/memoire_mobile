@@ -1,0 +1,25 @@
+<tool-head></tool-head>
+<ion-content padding has-header>
+
+	<div class="ExchangeForm">
+		<ion-item>
+			<ion-label>Montant à payer:</ion-label>
+			<ion-input [disabled]="true" type="number" [(ngModel)]="exchange.amount" ></ion-input>
+		</ion-item>
+		<ion-item *ngIf="false">
+			<ion-label>Montant reçu :</ion-label>
+			<ion-input type="number" [(ngModel)]="exchange.received" placeholder = " - - - - - - - - -  -  -"></ion-input>
+		</ion-item>
+		<ion-item *ngIf="false">
+			<ion-label>Monnaie à rendre :</ion-label>
+			<ion-input type="number" [disabled]="true" [value]="exchange.received - invoice.total_cost">
+			</ion-input>
+		</ion-item>
+	</div>
+
+	<div class="ExchangeBtn">
+		<!-- <button ion-button [disabled]="((exchange.received - invoice.total_cost) < 0)" *ngIf="exchange.received" (tap)="pushToConfirm()" class ="Okbnt" >OK</button> -->
+		<button ion-button (tap)="pushToConfirm()" class ="Okbnt" >OK</button>
+        <button ion-button (tap)="navCtrl.pop()">Retour</button>
+   </div>
+</ion-content>

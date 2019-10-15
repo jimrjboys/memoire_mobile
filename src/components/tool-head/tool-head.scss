@@ -1,0 +1,17 @@
+tool-head {
+	ion-header {
+		background-color: $head-color;
+		//min-height: 58px;
+		height: 67px;
+	}
+	.right-logo {
+		position: relative;
+		width: 5% ;
+		min-width: 58px;
+		float: right;
+		margin-right: 2%;
+		margin-top: 6px;
+	}
+
+}
+

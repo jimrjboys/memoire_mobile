@@ -1,0 +1,39 @@
+<tool-head></tool-head>
+<ion-content padding has-header>
+     <div class="factureIndice">
+     	  <p *ngIf= "!invoice.paid">Facture <p>
+	   	<h3 *ngIf="invoice.paid"> Facture déjà payée</h3>
+
+      </div>
+	<div class ="jirama_logo"><img src="/assets/icon/jirama2.png" alt="">
+	</div>
+	<ion-grid class="factureInfo">
+		<ion-row class="colInfo">
+			<ion-col col-3>Référence facture : </ion-col>
+			<ion-col col-3>{{ invoice.ref }}</ion-col>
+		</ion-row>
+		<ion-row>
+			<ion-col col-3>Référence client : </ion-col>
+			<ion-col col-3>{{ invoice.cust_ref }}</ion-col>
+		</ion-row>
+		<ion-row>
+			<ion-col col-3>Montant : </ion-col>
+			<ion-col col-3>{{ invoice.total_cost | number:'.2' }}</ion-col>
+		</ion-row>
+	</ion-grid>
+	<ion-grid class="ValidBtn">
+	<ion-row>
+		<ion-col>
+			<!-- <button ion-button (tap)="pushToExchange()" *ngIf="!invoice.paid">Payer</button> -->
+			<button ion-button (tap)="pushToTransfeFees()" *ngIf="!invoice.paid">Payer</button>
+			<button ion-button (tap)="cancel()" *ngIf="!invoice.paid">Annuler</button>
+		</ion-col>
+	</ion-row>
+	<ion-row >
+		<ion-col>
+		 <button ion-button (tap)="cancel()" *ngIf="invoice.paid">OK</button>
+        </ion-col>
+	</ion-row>
+</ion-grid>
+	<!-- <button ion-button (tap)="cancel()">OK</button> -->
+</ion-content>

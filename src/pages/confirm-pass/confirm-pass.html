@@ -1,0 +1,11 @@
+<tool-head></tool-head>
+<ion-content padding has-header>
+	<div class="ConfirmPassForm">
+		<ion-item>
+			<ion-label>Mot de passe</ion-label>
+			<ion-input type="password" [(ngModel)]="user.password"></ion-input>
+		</ion-item>
+	</div>
+	<button ion-button (tap)="confirm()">OK</button>
+	<button ion-button (tap)="navCtrl.pop()">Annuler</button>
+</ion-content>

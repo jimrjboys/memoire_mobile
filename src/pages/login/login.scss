@@ -1,0 +1,132 @@
+page-login {
+	$item-height: 50px;
+	$item-font-size: 18px;
+	$break-small: 700px;
+	$screen-s1:425px;
+
+	#fintek_logo {
+		display: block;
+		width: 20%;
+		margin: 5% auto;
+		min-width: 150px;
+	}
+
+	form {
+
+		.item-md {
+	    width: 72%;
+	    height: $item-height;
+	    font-size: $item-font-size!important;
+	    font-weight: 520;
+    	padding-right: 8%;
+		  @media screen and (max-width: $break-small) {
+		    width: 85%;
+		  }
+		}
+
+		ion-icon {
+	    font-size: 0.8em;
+		}
+
+		.text-input {
+			text-align: center;
+		}
+	}
+
+	.button-md {
+		height: $item-height!important;
+		margin: 30px auto;
+		width: 55%;
+		font-size: $item-font-size!important;
+	}
+
+	.loadIcon, .loadIcon:after {
+		border-radius: 50%;
+		width: 200px !important;
+		height: 200px;
+		
+		@media screen and (max-width: $screen-s1) {
+			width: 150px !important;
+			height: 150px;
+		}
+	}
+
+	.loadIcon {
+		margin: 5% auto;
+		font-size: 10px;
+		text-indent: -9999em;
+		//background: linear-gradient(#eaeceaa1, #44484433) !important;
+		background-image: url(../../assets/icon/gradiant.png);
+		-webkit-transform: translateZ(0);
+		-ms-transform: translateZ(0);
+		transform: translateZ(0);
+		-webkit-animation: load8 2s infinite linear;
+		animation: load8 2s infinite linear;
+		padding: 18px;
+		@media screen and (max-width: $screen-s1) {
+			margin: 11% auto;
+			padding: 13px;
+		}
+	}
+	
+	@-webkit-keyframes load8 {
+		0% {
+			-webkit-transform: rotate(0deg) ;
+			transform: rotate(0deg);
+		}
+		100% {
+			-webkit-transform: rotate(360deg);
+			transform: rotate(360deg);
+		}
+	}
+	@keyframes load8 {
+		0% {
+			-webkit-transform: rotate(0deg);
+			transform: rotate(0deg);
+		}
+		100% {
+			-webkit-transform: rotate(360deg);
+			transform: rotate(360deg);
+		}
+	}
+
+	@-webkit-keyframes image {
+		0% {
+			-webkit-transform: rotate(0deg);
+			transform: rotate(0deg);
+		}
+		100% {
+			-webkit-transform: rotate(-360deg);
+			transform: rotate(-360deg);
+		}
+	}
+	@keyframes image {
+		0% {
+			-webkit-transform: rotate(0deg);
+			transform: rotate(0deg);
+		}
+		100% {
+			-webkit-transform: rotate(-360deg);
+			transform: rotate(-360deg);
+		}
+	}
+
+	div.center {
+		background: white;
+		background-image:url(../../assets/icon/logo_alfa.png); 
+		height: 100%;
+		border-radius: 50%;
+		-webkit-transform: translateZ(0);
+		-ms-transform: translateZ(0);
+		transform: translateZ(0);
+		-webkit-animation: image 2s infinite linear;
+		animation: image 2s infinite linear;
+		background-size: 130%;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+
+	//media
+	
+
+}

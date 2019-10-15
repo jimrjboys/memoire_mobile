@@ -1,0 +1,79 @@
+page-account-detail {
+	.position_text{
+		margin-top: 10%;
+	  }
+	
+	  .position_text_solde{
+		margin-top: 0%;
+	  }
+	
+	  .position_table{
+		margin-top: 5%;
+		position: absolute;
+		.tete{
+		  background-color : #2B9BA3;
+		  font-size: 1.2rem;
+		}
+	  }
+	
+	  .fintek-title {
+		  font-size: 7.6rem;
+		  .blue {
+			  color: $blue-color2;
+		  }
+		  .not-blue {
+			  color: $head-color;
+			  font-size: 2.1rem;
+		  }
+	  }
+	
+	  .blue_small{
+		text-align: center;
+		color: $blue-color2;
+		font-weight: small;
+		border-style: solid 0.5px;
+		border-top : 0.5px solid #808080;
+		border-left : 0.5px solid #808080;
+		border-right : 0.5px solid #808080;
+		border-bottom : 0.5px solid #808080;
+		 .valeur{
+		   text-align: center;
+		   border-left: 0.5px solid #808080;
+		   color : black
+		 }
+		 .debit{
+		  text-align: center;
+		  background: white;
+		  border-left :0.5px solid #808080;
+		  color : black
+		}
+	  }
+	
+	  .epargne{
+		background: #DEEBF7;
+	  }
+	
+	
+	
+	  @media screen and (max-width: $screen-s1) {
+		.fintek-title {
+			font-size: 3.3rem;
+			text-align: center;
+		}
+	
+	
+		.position_text{
+		  margin-top: 10%;
+		}
+	
+		.position_text_solde{
+		  margin-top: 0%;
+		}
+	
+		.position_table{
+		  margin-top: 5%;
+		  position: absolute;
+		}
+	
+	  }
+}

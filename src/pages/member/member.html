@@ -1,0 +1,27 @@
+<!--ion-header>
+</ion-header-->
+<tool-head></tool-head>
+<ion-content padding>
+	<form (ngSubmit)="individuel()" [formGroup]="form">
+        <ion-item>
+			<ion-label stacked class="label_all">Numéro de téléphone mobile :</ion-label>
+			<ion-input class="individuel_input" type="tel" formControlName="phone" placeholder="- - -  - -  - - -  - -"
+			[brmasker]="{mask:'999 99 999 99', len:13, type:'num'}" *ngIf="!phoneValid"></ion-input>
+			<ion-input class="individuel_input" type="tel" formControlName="phone_valid" placeholder="- - -  - -  - - -  - -"
+			[brmasker]="{mask:'999 99 999 99', len:13, type:'num'}" [disabled]="true" *ngIf="phoneValid"></ion-input>
+		</ion-item>
+		<ion-item *ngIf="!cinValid">
+			<ion-label stacked class="label_all">Numéro CIN</ion-label>
+			<ion-input type="text" formControlName="cin_number" placeholder=" - - -  - - -  - - - " 
+			[brmasker]="{mask:'999 - 999 - 999 - 999', len:21, type:'num'}" class="individuel_input">
+			</ion-input>
+		</ion-item>
+		<ion-item *ngIf="cinValid">
+			<ion-label stacked class="label_all">IBAN</ion-label>
+			<ion-input type="text" formControlName="cin_number" placeholder="101 - 231 - 345 - 678" 
+			[brmasker]="{mask:'999 - 999 - 999 - 999', len:21, type:'num'}" class="individuel_input">
+			</ion-input>
+		</ion-item>
+		<button ion-button full class="validbtn">Valider</button>
+	</form>
+</ion-content>

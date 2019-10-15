@@ -1,0 +1,79 @@
+page-transfer {
+
+  .button-md {
+    background-color: #266b9e;
+    height: 64px !important;
+    padding: 10px !important;
+    width: 55%;
+    display: block;
+    margin: auto;
+    margin-bottom: 8px;
+    margin-top: 9px;
+  }
+
+  .ValidBtn{
+    margin-top: -30px !important;
+   } 
+
+  .row {
+    /* display: -webkit-box; */
+    display: block;
+    width: 90%;
+    margin: auto;
+   } 
+
+  .factureIndice {
+     text-align: center;
+     font-size: 2.5rem;
+     color: #2b9ba3;
+     font-weight: 600;
+
+   p {
+     margin-bottom: -9px;
+     }
+
+   h3 {
+      color:  #2b9ba3;
+      margin-top: -1px;
+      font-weight: 600;
+       font-size: 2.5rem;
+      }
+   }
+     
+    .jirama_logo{
+      /*margin-left: 45%;*/
+      width: 110px;
+      height: 110px;
+      display: block;
+      margin: auto;
+    }
+
+    .cancelbtn {
+      margin-bottom: 15px;
+   }
+ 
+    .factureInfo{
+      /*margin-left: 32% !important;*/
+      font-size: 1.6rem;
+      margin-bottom: 25px;
+      margin-top: 18px;
+    }
+
+   @media screen and (min-width: 700px) {
+
+   .factureInfo {
+     font-size: 21px;
+     margin-left: 27%;
+    }
+    
+    .factureIndice{
+      width: 35% !important;
+      margin: auto;
+      font-size: 2.9rem;
+
+     p{
+      font-size: 2.9rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+<tool-head></tool-head>
+<ion-content>
+	<tool-title title="CONSTITUER LE DOSSIER" [icon]="icon"></tool-title>
+	<pict [card]="cards.both" [id]="id" (getUrl)='cardBoth($event)' [show]="urlCin.both" ></pict>
+	<pict [card]="cards.sides"  [id]="id" (getUrl)='cardSides($event)' [show]="urlCin.sides"></pict>
+	<pict [card]="cards.residence"  [id]="id" (getUrl)='cardResidence($event)' [show]="urlCin.residence"></pict>
+	<tool-button text="Soumettre" (tap)="submit()"></tool-button>
+<!-- 	<ion-fab  left bottom style="margin-block-end: 15%;" (click)="navCtrl.pop()">
+      <button ion-fab color="light" mini><ion-icon name="arrow-dropleft"></ion-icon></button>
+    </ion-fab> -->
+</ion-content>
+<!--ion-content padding class="background">
+   <br>
+   <br>
+  <div id="form-login">
+    <h1 class="register-title">
+		Mes dossiers <img src="/assets/imgs/inbox.png" class="folders" alt="icon folder">
+	</h1>
+	<br>
+	<ion-card (tap)="takePicture('cin')" class="cin">
+	    <img alt="cin not set" /-->
+	    <!--img src="/assets/imgs/card-saopaolo.png" [height]="imgHeight"/-->
+	    <!--div class="imgs_card" style="height: 143px; width: 143px; top: 9% !important; left: 25% !important;">
+	      <h2 class="titles_c" style="position: relative; top: 23%;">CIN</h2>
+	      <p class="iocons" *ngIf="pict['both'] && pict['sides']" style="position: relative; top: 27%;">
+	      	<img src="/assets/imgs/photo-camera.png" class="cames">
+	      </p>
+	    </div-->
+    	<!--div class="container">
+			<span class="elements">CIN</span>
+			<img src="/assets/imgs/photo-camera.png" class="cames" alt="icon camera"/>
+			<div class="circle" style="animation-delay: -3s"></div>
+			<div class="circle" style="animation-delay: -2s"></div>
+			<div class="circle" style="animation-delay: -1s"></div>
+			<div class="circle" style="animation-delay: 0s"></div> 
+	    </div-->
+	    <!--div class="card-subtitle">
+	    	<ul>
+	    		<li>Récto <ion-icon name="checkmark-circle-outline"></ion-icon></li>
+	    		<li>Verso <ion-icon name="checkmark-circle-outline"></ion-icon></li>
+	    	</ul>
+	    </div-->
+  	<!--/ion-card>
+  	<ion-card (tap)="takePicture('residence')" class="residence">
+	    <img *ngIf="!pict['residence']" alt="residence not set"/>
+	    <img [src]="pict['residence']" *ngIf="pict['residence']" alt="residence image" />
+	    <div class="container">
+			<span class="elements">Résidence</span>
+			<img src="/assets/imgs/photo-camera.png" class="cames" alt="icon camera" />
+			<div class="circle" style="animation-delay: -3s"></div>
+			<div class="circle" style="animation-delay: -2s"></div>
+			<div class="circle" style="animation-delay: -1s"></div>
+			<div class="circle" style="animation-delay: 0s"></div> 
+	    </div>
+  	</ion-card>
+
+	<button ion-button full (tap)="save()" class="btn-form"> <img src="/assets/imgs/enter-arrow.png" class="arrow_left" alt="icon save"> Enregistrer </button>
+  </div>
+</ion-content-->
